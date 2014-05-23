@@ -4,8 +4,8 @@ Template.login.events({
     // prevent submit form
     e.preventDefault();
     // retrieve the input field values
-    var userName = t.find('#txtemail').value
-      , password = t.find('#txtpassword').value;
+    var userName = t.find('#txtemail').value,
+        password = t.find('#txtpassword').value;
 
     // Trim and validate your fields here....
       //TODO
