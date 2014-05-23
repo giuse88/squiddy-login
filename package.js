@@ -11,8 +11,8 @@ Package.on_use(function (api, where) {
     'client/views/registration/registration.html',
     'client/views/registration/registration.js',
     'client/views/stylesheet/squiddy-login.css',
-    'client/views/main.html',
-    'client/views/main.js'
+    'client/main.html',
+    'client/main.js'
   ];
 
   api.add_files(clientFiles, 'client');
