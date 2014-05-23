@@ -17,6 +17,10 @@ Package.on_use(function (api, where) {
 
   api.add_files(clientFiles, 'client');
 
+  api.use('templating', 'client');
+  api.use('handlebars', 'client');
+  api.use('underscore', 'client');
+
   //this to export Constructors
   //  if (api.export) {
   //    api.export('Errors');
