@@ -17,6 +17,7 @@ Package.on_use(function (api, where) {
 
   api.add_files(clientFiles, 'client');
 
+  //adding templating for handlebar tag use;
   api.use('templating', 'client');
   api.use('handlebars', 'client');
   api.use('underscore', 'client');
