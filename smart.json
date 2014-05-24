@@ -4,6 +4,7 @@
       "git": "https://securityCollaborator:squiddypassword1@github.com/giuse88/squiddy-dependency.git",
       "tag": "v0.9"
     },
-    "jquery-validation": {}
+    "jquery-validation": {},
+    "iron-router": {}
   }
 }

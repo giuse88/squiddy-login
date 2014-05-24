@@ -11,3 +11,4 @@ jquery-validation
 accounts-google
 oauth-encryption
 service-configuration
+iron-router
