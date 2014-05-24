@@ -23,6 +23,7 @@ Template.login.events({
   'click #google-btn' : function () {
     Meteor.loginWithGoogle(['email', 'profile'], function(obj) {
       console.log(obj);
+
     });
   }
 
