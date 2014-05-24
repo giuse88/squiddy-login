@@ -1,5 +1,6 @@
 // internal: is optional, will not show with meteor list if false.
-Package.describe({
+
+/*Package.describe({
   summary: "Login package for Squiddy",
   internal: true
 });
@@ -31,3 +32,4 @@ Package.on_use(function (api, where) {
 Package.on_test(function (api, where) {
   // same api methods as Package.on_use's callback function parameter
 });
+  */
