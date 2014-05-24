@@ -6,6 +6,7 @@
 standard-app-packages
 autopublish
 insecure
-squiddy-dependency
 accounts-base
 accounts-password
+squiddy-dependency
+jquery-validation

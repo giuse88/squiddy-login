@@ -14,26 +14,21 @@
                   <div class="form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                     <div class="input-with-icon  right">
                       <i class=""></i>
-                      <input type="text" name="txtusername" id="txtemail" class="form-control"
+                       <!-- Don't use type email, because it triggers a check from the framewokr ( I presume )
+                           which destroys our design
+                       -->
+                      <input type="text" name="email" id="email" class="form-control"
                              placeholder="Email">
                     </div>
                   </div>
                   <div class="form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                     <div class="input-with-icon  right">
                       <i class=""></i>
-                      <input type="password" name="txtpassword" id="txtpassword" class="form-control"
+                      <input type="password" name="password" id="password" class="form-control"
                              placeholder="Password">
                     </div>
                   </div>
-                  <div class="form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                    <div class="checkbox checkbox check-primary">
-                      <input type="checkbox" id="" value="1">
-                      <label for="checkbox1">Remember me</label>
-                      <a href="#">Forgot password?</a>&nbsp;&nbsp;
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-cons">Login
-                    </button>
-                  </div>
+                    <button id="submit-btn" type="submit" class="btn btn-primary btn-cons">Login </button>
                 </form>
               </div>
             </div>
