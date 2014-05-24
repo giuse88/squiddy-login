@@ -1,38 +1,43 @@
-(function(){
-  Accounts.onCreateUser(function (options, user) {
+Accounts.config({sendVerificationEmail: true, forbidClientAccountCreation: false});
 
-    console.log(user);
-    var accessToken = user.services.google.accessToken,
-      result,
-      profile;
+Accounts.onCreateUser(function (options, user) {
 
-    result = Meteor.http.get("https://www.googleapis.com/oauth2/v3/userinfo", {
-      headers: {"User-Agent": "Meteor/1.0"},
+    if (user.services.google) {
+      console.log("login with google");
+      var accessToken = user.services.google.accessToken,
+        result,
+        profile;
 
-      params: {
-        access_token: accessToken
-      }
-    });
+      result = Meteor.http.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+        headers: {"User-Agent": "Meteor/1.0"},
 
-    if (result.error)
-      throw result.error;
+        params: {
+          access_token: accessToken
+        }
+      });
 
-    profile = _.pick(result.data,
-      "name",
-      "given_name",
-      "family_name",
-      "profile",
-      "picture",
-      "email",
-      "email_verified",
-      "birthdate",
-      "gender",
-      "locale",
-      "hd");
+      if (result.error)
+        throw result.error;
 
-    // console.log(profile);
-    user.profile = profile;
+      profile = _.pick(result.data,
+        "name",
+        "given_name",
+        "family_name",
+        "profile",
+        "picture",
+        "email",
+        "email_verified",
+        "birthdate",
+        "gender",
+        "locale",
+        "hd");
 
+      // console.log(profile);
+      user.profile = profile;
+
+      return user;
+    }
+
+    user.profile = options.profile;
     return user;
-  });
-}());
+});
