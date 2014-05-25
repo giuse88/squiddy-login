@@ -63,18 +63,13 @@ Template.registration.events({
       var profile = {
         "first_name" : $('#registrationFirstName').val(),
         "family_name": $('#registrationLastName').val(),
-        "dob": $('#registrationDOB').val(),
-        "email": email
+        "dob": $('#registrationDOB').val()
       };
 
       console.log(email);
       console.log(password);
       console.log(profile);
-      Accounts.createUser({
-        email:email,
-        password : password,
-        profile : profile
-      }, function(err) {
+      Meteor.call('squiddyCreateUser', {email:email, password : password, profile : profile }, function(err) {
         console.log(err);
       })
     }

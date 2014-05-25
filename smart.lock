@@ -4,14 +4,30 @@
     "basePackages": {
       "squiddy-dependency": {
         "git": "https://securityCollaborator:squiddypassword1@github.com/giuse88/squiddy-dependency.git",
-        "tag": "v0.9"
-      }
+        "tag": "v1.3"
+      },
+      "iron-router": {}
     },
     "packages": {
       "squiddy-dependency": {
         "git": "https://securityCollaborator:squiddypassword1@github.com/giuse88/squiddy-dependency.git",
-        "tag": "v0.9",
-        "commit": "7004c92c6d1022f477a8a3dc4863ee8492f8971d"
+        "tag": "v1.3",
+        "commit": "c69865faa9cc2444da186df673c14cab305c4d16"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }
