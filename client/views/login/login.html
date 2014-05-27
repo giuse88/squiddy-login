@@ -4,31 +4,36 @@
           <div class="row ">
             <div class="col-md-12">
               <div class="col-md-12">
-                <!--<div class="row-fluid">-->
-                <div class="m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+
+                <div id="login-title" class=" login-title-margin m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                   <h3 >Login <span class="semi-bold">Here</span></h3>
-                  <p>Enter your username and password to login</p>
-                  <!--<br>-->
                 </div>
+
                 <form id="login-form" action="#">
+
                   <div class="form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                     <div class="input-with-icon  right">
-                      <i class=""></i>
-                       <!-- Don't use type email, because it triggers a check from the framewokr ( I presume )
-                           which destroys our design
-                       -->
+                      <i class="fa fa-envelope"></i>
                       <input type="text" name="email" id="email" class="form-control"
                              placeholder="Email">
                     </div>
                   </div>
+
                   <div class="form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                     <div class="input-with-icon  right">
-                      <i class=""></i>
+                      <i class="fa fa-lock"></i>
                       <input type="password" name="password" id="password" class="form-control"
                              placeholder="Password">
                     </div>
                   </div>
+
+                  <div class=" login-title-margin text-center form-group m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
                     <button id="submit-btn" type="submit" class="btn btn-primary btn-cons">Login </button>
+                    <div>
+                      <a href="{{ pathFor 'resetPassword' }}" id="forgot-password-button"> Forgot password?</a>
+                    </div>
+                  </div>
+
                 </form>
               </div>
             </div>
@@ -37,7 +42,9 @@
             <div class="row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
               <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 col-xs-7">
                 <p class="">Dont' have an account?
+                  <div>
                   <a href="{{ pathFor 'registration' }}" id="register_toggle">Create Account</a>
+                  </div>
                 </p>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-xs-5">
