@@ -9,6 +9,8 @@ function removeErrorLogin() {
 function loginHandler(err){
   if (err) {
     renderErrorLogin();
+  }else {
+    Router.go('dashboard');
   }
 }
 
