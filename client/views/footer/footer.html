@@ -1,0 +1,26 @@
+<template name="footer">
+  <div class="tiles grey p-t-20 p-b-20 text-black">
+    <div class="row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+      <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 col-xs-7">
+        <p class=""> {{ text }}
+        <div>
+          <a href="{{ loginPaths }}" id="register_toggle"> {{ linkText }} </a>
+        </div>
+        </p>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-xs-5">
+        <div class="btn-group-sm pull-right">
+          <button type="button" class="btn btn-info">&nbsp;<span class="pull-left">
+                    <i id="facebook-button" class="fa fa-facebook"></i></span> <span class="bold">&nbsp;</span>
+          </button>
+          <button type="button" class="btn btn-success"><span class="pull-left"><i
+              class="fa fa-twitter"></i></span> <span class="bold"></span>
+          </button>
+          <button id="google-btn" type="button" class="btn btn-danger"><span class="pull-left"><i
+              class="fa fa-google-plus"></i></span> <span class="bold"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
