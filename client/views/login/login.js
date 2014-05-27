@@ -1,32 +1,29 @@
+function renderErrorLogin() {
+  $('#error-login-message').removeClass("hidden");
+}
+
+function removeErrorLogin() {
+  $('#error-login-message').removeClass("hidden");
+}
+
+function loginHandler(err){
+  if (err) {
+    renderErrorLogin();
+  }
+}
+
 Template.login.events({
 
   'click #submit-btn' : function(event, $target) {
     if ($('#login-form').valid()) {
-      //
       var email = $('#email').val();
       var password = $('#password').val();
-      //
-      console.log(email);
-      console.log(password);
-      Meteor.loginWithPassword({email:email}, password, function (err) {
-        //
-        if (err) {
-          console.log("Error during login: ", err.reason);
-          // TODO error rendering
-        } else {
-          console.log("Login sucessful")
-        }
-        //
-      });
-      //
+      Meteor.loginWithPassword({email:email}, password, loginHandler);
     }
   },
 
   'click #google-btn' : function () {
-    Meteor.loginWithGoogle(['email', 'profile'], function(obj) {
-      console.log(obj);
-
-    });
+    Meteor.loginWithGoogle(['email', 'profile'],loginHandler);
   }
 
 });

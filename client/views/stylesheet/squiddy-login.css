@@ -12,6 +12,22 @@ body {
     margin-bottom: 30px;
 }
 
+#error-login-message{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+#error-login-message p {
+    font-size: 14px;
+}
+
+#facebook-button {
+    position: relative;
+    left: 3px;
+    top: 1.5px;
+}
+
 /*
 .form-group {
     margin-bottom: 0px;
