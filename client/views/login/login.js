@@ -1,18 +1,4 @@
-function renderErrorLogin() {
-  $('#error-login-message').removeClass("hidden");
-}
 
-function removeErrorLogin() {
-  $('#error-login-message').removeClass("hidden");
-}
-
-function loginHandler(err){
-  if (err) {
-    renderErrorLogin();
-  }else {
-    Router.go('dashboard');
-  }
-}
 
 Template.login.events({
 
@@ -20,12 +6,8 @@ Template.login.events({
     if ($('#login-form').valid()) {
       var email = $('#email').val();
       var password = $('#password').val();
-      Meteor.loginWithPassword({email:email}, password, loginHandler);
+      Meteor.loginWithPassword({email:email}, password, LOGIN.loginHandler);
     }
-  },
-
-  'click #google-btn' : function () {
-    Meteor.loginWithGoogle(['email', 'profile'],loginHandler);
   }
 
 });

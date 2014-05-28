@@ -19,3 +19,12 @@ Template.footer.helpers({
  }
 
 });
+
+
+Template.footer.events({
+
+  'click #google-btn' : function () {
+    Meteor.loginWithGoogle(['email', 'profile'],LOGIN.loginHandler);
+  }
+
+});
