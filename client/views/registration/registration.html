@@ -1,69 +1,29 @@
 <template name="registration">
+
   <div class="row login-container animated fadeInUp block_register">
+
     <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 tiles white no-padding">
-      <div class="row ">
+
+      <div id="registration-row" class="row ">
+
         <div class="col-md-12 ">
-          <div class="col-md-12">
-            <!--<div class="col-md-12">-->
-            <h3 class="m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">Register <span class="semi-bold">Here</span></h3>
-            <!--</div>-->
 
-            <form id="registrationForm" class="animated fadeIn">
-              <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                <div class="col-md-6 col-sm-6">
-                  <input name="registrationFirstName" id="registrationFirstName" type="text" class="form-control"
-                         placeholder="First Name">
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <input name="registrationLastName" id="registrationLastName" type="text" class="form-control"
-                         placeholder="Last Name">
-                </div>
-              </div>
-              <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                <div class="col-md-6 col-sm-6">
-                  <!--<input name="reg_pass" id="reg_date" type="text" class="form-control"-->
-                  <!--placeholder="DOB">-->
-                  <input type="text" class="form-control" id="registrationDOB"  name="registrationDOB" placeholder="Date of Birth">
-                </div>
-              </div>
-              <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                <div class="col-md-6 col-sm-6">
-                  <input name="password" id="registrationPassword" type="password" class="form-control"
-                         placeholder="Password">
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <input name="passwordConfirmation" id="passwordConfirmation" type="password" class="form-control"
-                         placeholder="Confirm password">
-                </div>
-              </div>
-              <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                <div class="col-md-12 ">
-                  <input name="registrationEmail" id="registrationEmail" type="text" class="form-control"
-                         placeholder="Email">
-                </div>
-              </div>
+          <h3 class=" m-b-30 m-t-30 text-center m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">Register <span class="semi-bold">Here</span></h3>
 
-              <div class="row row-fluid form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div class="checkbox checkbox check-primary">
-                    <input type="checkbox" id="checkbox1" value="1">
-                    <label for="checkbox1">Agree with <a href="#">terms and conditions</a></label>
-                  </div>
+          {{ #if isRegistrationSuccessful }}
+              {{> registrationSuccessful }}
+          {{ else }}
+            {{> registrationForm }}
+          {{ /if }}
 
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <button id="registationSubmit" type="button" class="btn btn-info btn-cons pull-right"> Create an account
-                  </button>
-                </div>
-              </div>
-
-            </form>
-          </div>
         </div>
+
       </div>
 
-       {{> footer }}
+      {{> footer }}
 
     </div>
+
   </div>
+
 </template>

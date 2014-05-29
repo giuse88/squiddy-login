@@ -1,0 +1,85 @@
+<template name="registrationForm">
+
+      <form id="registration-form" class="animated fadeIn" >
+
+        <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+
+          <div class="col-md-6 col-sm-6">
+            <div class="input-with-icon  right">
+              <i class="fa fa-user"></i>
+              <input name="registrationFirstName" id="registrationFirstName" type="text" class="form-control"
+                     placeholder="First Name">
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+            <div class="input-with-icon  right">
+              <i class="fa fa-user"></i>
+              <input name="registrationLastName" id="registrationLastName" type="text" class="form-control"
+                     placeholder="Last Name">
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+
+          <div class="col-md-6 col-sm-6">
+            <div class="input-with-icon  right">
+              <i class="fa fa-calendar"></i>
+              <input type="text" class="form-control" id="registrationDOB"  name="registrationDOB" placeholder="Date of Birth">
+            </div>
+          </div>
+
+          <div class=" col-md-6 col-sm-6">
+            <div class="input-with-icon  right">
+              <i class="fa fa-envelope"></i>
+              <input name="registrationEmail" id="registrationEmail" type="text" class="form-control"
+                     placeholder="Email">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+          <div class="col-md-6 col-sm-6">
+
+            <div class="input-with-icon  right">
+              <i class="fa fa-lock"></i>
+              <input name="password" id="registrationPassword" type="password" class="form-control"
+                     placeholder="Password">
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+            <div class="input-with-icon  right">
+              <i class="fa fa-lock"></i>
+              <input name="passwordConfirmation" id="passwordConfirmation" type="password" class="form-control"
+                     placeholder="Confirm password">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row  hidden form-row m-l-15 m-r-15 xs-m-l-10 xs-m-r-10">
+          <div id="error-registration-message" class=" m-l-20 m-r-20 alert alert-danger text-center">
+            <p class="error"> Email or Password incorrect</p>
+          </div>
+        </div>
+
+        <div class="row row-fluid form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
+
+          <!--  <div class="checkbox checkbox check-primary text-center">
+              <input type="checkbox" id="checkbox1" value="1">
+              <label for="checkbox1">Agree with <a href="#">terms and conditions</a></label>
+            </div>
+          -->
+
+          <div class="text-center m-b-20 m-t-20">
+            <button id="registationSubmit" type="button" class="btn btn-cons btn-primary "> Create an account
+            </button>
+          </div>
+
+        </div>
+
+      </form>
+</template>

@@ -18,7 +18,11 @@ Template.registration.rendered = function () {
         required: true,
         minlength:8
       },
+      registrationDOB: {
+        required : true
+      },
       passwordConfirmation : {
+        required: true,
         equalTo : '#registrationPassword'
       }
     },
@@ -46,7 +50,6 @@ Template.registration.rendered = function () {
     },
 
     submitHandler: function (form) {
-      //form.submit();
     }
   });
 }
@@ -70,10 +73,24 @@ Template.registration.events({
       console.log(password);
       console.log(profile);
       Meteor.call('squiddyCreateUser', {email:email, password : password, profile : profile }, function(err) {
-        console.log(err);
+
+        if (err) {
+          console.log(err);
+          LOGIN.renderErrorLogin();
+          Session.set('registrationResult', false);
+        } else {
+          Session.set('registrationResult', true);
+        }
+
       })
     }
   }
+});
 
+Template.registration.helpers({
+
+  'isRegistrationSuccessful' : function(){
+    return Session.equals('registrationResult', true);
+  }
 
 });
