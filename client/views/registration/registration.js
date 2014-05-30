@@ -1,6 +1,6 @@
-Template.registration.rendered = function () {
+Template.registrationForm.rendered = function () {
 
-  $('#registrationForm').validate({
+  $('#registration-form').validate({
     debug: true,
 
     rules: {
@@ -54,11 +54,11 @@ Template.registration.rendered = function () {
   });
 }
 
-Template.registration.events({
+Template.registrationForm.events({
 
   'click #registationSubmit' : function() {
     console.log();
-    if ($('#registrationForm').valid()) {
+    if ($('#registration-form').valid()) {
       //
       var email = $('#registrationEmail').val();
       var password = $('#registrationPassword').val();
