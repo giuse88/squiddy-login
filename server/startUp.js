@@ -5,6 +5,21 @@ Meteor.startup(function () {
     return Meteor.absoluteUrl('verify-email/' + token);
   };
 
+
+  Accounts.validateLoginAttempt(function (info) {
+    console.log("validating attempt info :",info);
+    // verification email
+    var email = info.user.emails[0];
+    console.log(email);
+
+    if(!email.verified) {
+      new Meteor.error(403, "Email not valid");
+      return false;
+    }
+
+    return true;
+  });
+
   Meteor.methods({
 
     'squiddyCreateUser' : function(registrationForm) {
@@ -17,6 +32,7 @@ Meteor.startup(function () {
       var newUserId = Accounts.createUser(registrationForm);
 
       if (newUserId) {
+        console.log("Sending verification email for the user " + newUserId);
         Accounts.sendVerificationEmail(newUserId);
       } else {
         console.log("Invalid user id");
@@ -25,5 +41,6 @@ Meteor.startup(function () {
       console.log("created user" + newUserId);
 
     }
-  })
+  });
+
 });

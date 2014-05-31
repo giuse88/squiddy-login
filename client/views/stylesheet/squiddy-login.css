@@ -34,6 +34,6 @@ body {
 }
 */
 
-#login-form .error {
+#login-form .error , #registration-form .error {
    color: #f35958;
 }
