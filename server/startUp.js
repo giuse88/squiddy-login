@@ -5,6 +5,9 @@ Meteor.startup(function () {
     return Meteor.absoluteUrl('verify-email/' + token);
   };
 
+  Accounts.urls.resetPassword = function(token) {
+    return Meteor.absoluteUrl('resetPassword/' + token);
+  };
 
   Accounts.validateLoginAttempt(function (info) {
     console.log("validating attempt info :",info);
